@@ -16,11 +16,12 @@ public class TestHelloWorld {
 		try {
 			sqlSession = SqlSessionFactoryUtil.openSqlSession();
 			RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
-			Role role = new Role();
-			role.setRoleName("testName");
-			role.setNote("testNote");
-			roleMapper.insertRole(role);
-			roleMapper.deleteRole(1L);
+//			Role role = new Role();
+//			role.setRoleName("testName");
+//			role.setNote("testNote");
+//			roleMapper.insertRole(role);
+//			roleMapper.deleteRole(1L);
+			roleMapper.getAllRoles();
 			sqlSession.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,5 +1,7 @@
 package study.helloworld.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Select;
 
 import study.helloworld.po.Role;
@@ -9,5 +11,7 @@ public interface RoleMapper {
 	public Role getRole(Long id);
 	public int insertRole(Role role);
 	public int deleteRole(Long id);
+	
+	public List<Role> getAllRoles();
 	
 }

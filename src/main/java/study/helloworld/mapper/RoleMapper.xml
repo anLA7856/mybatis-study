@@ -14,4 +14,8 @@
 	<delete id="deleteRole" parameterType="java.lang.Long">
 		delete from t_role where id = #{id}
 	</delete>
+	
+	<select id="getAllRoles" resultType="study.helloworld.po.Role">
+		select id, role_name as roleName, note from t_role
+	</select>
 </mapper>
